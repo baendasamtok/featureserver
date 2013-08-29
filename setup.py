@@ -9,7 +9,7 @@ except:
     use_setuptools()
     from setuptools import setup
 
-readme = file('doc/Readme.txt','rb').read()
+#readme = file('doc/Readme.txt','rb').read()
 
 classifiers = [
         'Development Status :: 4 - Beta',
@@ -24,11 +24,12 @@ classifiers = [
 # but put them in featureserver/featureserver.cfg using setuptools
 # otherwise. 
 extra = { }
-if "--debian" in sys.argv:
-   extra['data_files']=[('/etc', ['featureserver.cfg'])]
-   sys.argv.remove("--debian")
-else:
-   extra['data_files']=[('FeatureServer', ['featureserver.cfg'])]
+
+#if "--debian" in sys.argv:
+#   extra['data_files']=[('/etc', ['featureserver.cfg'])]
+#   sys.argv.remove("--debian")
+#else:
+#   extra['data_files']=[('FeatureServer', ['featureserver.cfg'])]
 
 setup(name='FeatureServer',
       version='1.12',
